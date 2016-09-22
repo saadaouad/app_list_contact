@@ -11,6 +11,7 @@
 	<script src="controllers/controller.js"></script>
 	<div class="container">
 		<h1> Contact for list app </h1>
+		<hr size="30">
 		<table class="table">
 			<thead>
 				<tr>
@@ -19,6 +20,13 @@
 					<th>Number</th>
 				</tr>
 			</thead>
+			<tbody>
+				<tr ng-repeat="contact in contactList">
+					<th>{{contact.name}}</th>
+					<th>{{contact.email}}</th>
+					<th>{{contact.number}}</th>
+				</tr>
+			</tbody>
 		</table>
 	</div>
 </body>
