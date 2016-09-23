@@ -3,6 +3,7 @@
 <head>
 	<title>Contact list app</title>
 	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="style/img/index.ico" type="image/x-icon" />
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -18,9 +19,16 @@
 					<th>Name</th>
 					<th>Email</th>
 					<th>Number</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
+				<tr>
+					<td><input class="form-control" ng-model="contact.name"></td>
+					<td><input class="form-control" ng-model="contact.email"></td>
+					<td><input class="form-control" ng-model="contact.number"></td>
+					<td><button class="btn btn-primary" ng-click="addContact()">Add contact</button></td>
+				</tr>
 				<tr ng-repeat="contact in contactList">
 					<th>{{contact.name}}</th>
 					<th>{{contact.email}}</th>
