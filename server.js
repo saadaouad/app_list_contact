@@ -51,5 +51,5 @@ app.put("/contactList/:id", function(req, res){
     	});
 });
 
-//app.listen(3000);
-//console.log("Server running in port 3000");
+app.listen(3000);
+console.log("Server running in port 3000");
